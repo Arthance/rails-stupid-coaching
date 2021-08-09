@@ -1,0 +1,13 @@
+
+<%= @sentence %>
+<p>   <em>- Your question</em></p><br>
+<% if @sentence.include? '?' %>
+  <strong><%= 'Silly question, get dressed and go to work!' %></strong>
+ <% elsif @sentence == 'I am going to work' %>
+    <strong><%= 'Great!' %></strong>
+<% else %>
+    <strong><%= "I don't care, get dressed and go to work!"%></strong>
+<% end %>
+<p>    <em>- Coach's answer</em></p>
+<br>
+<%= link_to "Ask a new question", ask_path %>
